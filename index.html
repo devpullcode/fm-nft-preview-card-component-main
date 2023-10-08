@@ -9,5 +9,47 @@
     <link rel="icon" type="image/x-icon" sizes="32x32" href="./images/favicon.ico" />
     <link rel="stylesheet" href="build/css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <article class="m-ntf-preview-card" data-name-cryptocurrency="crypto-nth">
+      <!-- ========== header ========== -->
+      <header class="m-ntf-preview-card__header">
+        <div class="m-ntf-preview-card__img-container">
+          <picture class="m-block__img">
+            <source type="image/avif" srcset="build/img/image-equilibrium.avif" />
+            <source type="image/webp" srcset="build/img/image-equilibrium.webp" />
+            <img loading="lazy" src="build/img/image-equilibrium.jpg" class="m-ntf-preview-card__img" alt="Image for card preview" width="500" height="300" />
+          </picture>
+        </div>
+
+        <h2 class="m-ntf-preview-card__title">equilibrium #<span class="id-user">3429</span></h2>
+      </header>
+
+      <div class="m-ntf-preview-card__description">
+        <p class="m-ntf-preview-card__txt">Our Equilibrium collection promotes balance and calm.</p>
+      </div>
+
+      <!-- ========== crypto details ========== -->
+      <div class="m-ntf-preview-card__crypto-details">
+        <div class="m-ntf-preview-card__market-cap-container">
+          <img src="build/img/icon-ethereum.svg" class="m-ntf-preview-card__market-cap-img" alt="icon ethereum" />
+          <p class="m-ntf-preview-card__market-cap-txt"><span class="m-ntf-preview-card__market-cap-value">0.041</span>ETH</p>
+        </div>
+
+        <div class="m-ntf-preview-card__price-change-container">
+          <img src="build/img/icon-ethereum.svg" class="m-ntf-preview-card__price-change-img" alt="icon ethereum" />
+          <p class="m-ntf-preview-card__price-change-txt"><span class="m-ntf-preview-card__price-change-value">3</span>days left</p>
+        </div>
+      </div>
+
+      <!-- ========== footer ========== -->
+      <div class="m-ntf-preview-card__data-user-container">
+        <picture class="m-block__img">
+          <source type="image/avif" srcset="build/img/image-avatar.avif" />
+          <source type="image/webp" srcset="build/img/image-avatar.webp" />
+          <img loading="lazy" src="build/img/image-avatar.jpg" class="m-ntf-preview-card__img" alt="User image for public preview card" width="500" height="300" />
+        </picture>
+        <p class="m-ntf-preview-card__data-user-txt">Creation of <span class="m-ntf-preview-card__data-user-name">Jules Wyvern</span></p>
+      </div>
+    </article>
+  </body>
 </html>
