@@ -1,0 +1,140 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.m-ntf-preview-card {
+  width: 20.4375rem;
+  padding: 1.5rem;
+
+  border-radius: 15px;
+  background-color: v.$very-dark-blue-card-bg;
+  transition: all 0.8s;
+
+  @include m.media("md", v.$media-query-approach) {
+    width: 21.875rem;
+  }
+
+  /* ========== header ========== */
+  &__header {
+    margin-bottom: 0.75rem;
+
+    @include m.media("md", v.$media-query-approach) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__img-container {
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    &::after {
+      background: url(../img/icon-view.svg) no-repeat center;
+    }
+    &::before {
+      background: v.$cyan;
+    }
+  }
+  &__img-card {
+    border-radius: 8px;
+  }
+  &__title {
+    width: fit-content;
+    color: v.$pure-white;
+    margin-bottom: 0;
+
+    font-size: 1.375rem;
+    text-transform: capitalize;
+    line-height: normal;
+    transition: color 0.3s;
+  }
+  &__description {
+    margin-bottom: 1rem;
+
+    @include m.media("md", v.$media-query-approach) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__txt {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    color: v.$soft-blue;
+  }
+
+  /* ========== crypto details ========== */
+  &__crypto-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    @include m.media("md", v.$media-query-approach) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__detail {
+    display: flex;
+    align-items: center;
+  }
+  &__market-cap-img {
+    width: 0.6875rem;
+    height: 1.125rem;
+    margin-right: 0.405rem;
+  }
+  &__market-cap-txt {
+    line-height: normal;
+    color: v.$cyan;
+  }
+  &__price-change-img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.4813rem;
+  }
+  &__price-change-txt {
+    color: v.$soft-blue;
+  }
+  &__detail-txt {
+    font-size: 0.9375rem;
+
+    @include m.media("md", v.$media-query-approach) {
+      font-size: 1rem;
+    }
+  }
+
+  /* ========== footer ========== */
+  &__data-user-container {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid v.$very-dark-blue-line;
+  }
+  &__img-user {
+    width: 2.0625rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+
+    border: 1px solid v.$pure-white;
+  }
+  &__data-user-txt {
+    height: fit-content;
+
+    font-size: 0.9375rem;
+    line-height: normal;
+    color: v.$soft-blue;
+
+    @include m.media("md", v.$media-query-approach) {
+      font-size: 1rem;
+    }
+  }
+  &__data-user-name {
+    color: v.$pure-white;
+    transition: color 0.3s;
+  }
+}

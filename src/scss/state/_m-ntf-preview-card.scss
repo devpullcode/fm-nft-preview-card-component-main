@@ -1,0 +1,23 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.m-ntf-preview-card {
+  cursor: default;
+  /* ========== header ========== */
+  &__img-container {
+    &:hover::after {
+      opacity: 1;
+    }
+    &:hover::before {
+      opacity: 0.503;
+    }
+  }
+  &__title:hover {
+    color: v.$cyan;
+  }
+
+  /* ========== footer ========== */
+  &__data-user-name:hover {
+    color: v.$cyan;
+  }
+}
